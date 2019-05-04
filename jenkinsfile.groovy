@@ -1,4 +1,5 @@
 node {
+    properties([parameters([string(defaultValue: 'IP', description: 'where to build  IP', name: 'Env', trim: false)])])
     stage("Clone repo"){
         git "https://github.com/ainsfa20182018/flask-examples.git"
     }
